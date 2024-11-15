@@ -105,3 +105,8 @@ Run the tests using:
    # Apply migration
    python manage.py migrate
    ```
+
+4. Create superuser:
+   ```bash
+   python manage.py createsuperuser
+   ```

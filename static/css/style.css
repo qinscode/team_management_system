@@ -15,4 +15,70 @@
 
 .badge {
     font-size: 0.9em;
+}
+
+/* Enhanced Custom styles */
+.card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.badge {
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+}
+
+/* Statistics Card Styles */
+.stats-card {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.stats-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.role-badge {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-size: 0.85em;
+    margin-right: 0.5em;
+}
+
+/* Animation for statistics */
+@keyframes countUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-stats {
+    animation: countUp 0.5s ease-out forwards;
 } 

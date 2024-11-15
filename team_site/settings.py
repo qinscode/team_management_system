@@ -10,12 +10,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-your-secret-key-here'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -51,6 +51,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'members.context_processors.team_stats',
             ],
         },
     },
