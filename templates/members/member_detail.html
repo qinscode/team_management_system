@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}{{ object.first_name }} {{ object.last_name }}{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">{{ object.first_name }} {{ object.last_name }}</h1>
+        <h3 class="card-subtitle mb-3 text-muted">{{ object.role }}</h3>
+        
+        <div class="mb-3">
+            <strong>Email:</strong> {{ object.email }}
+        </div>
+        
+        <div class="mb-3">
+            <strong>Date Joined:</strong> {{ object.date_joined }}
+        </div>
+        
+        <div class="mb-3">
+            <strong>Status:</strong> 
+            {% if object.is_active %}
+                <span class="badge bg-success">Active</span>
+            {% else %}
+                <span class="badge bg-secondary">Inactive</span>
+            {% endif %}
+        </div>
+        
+        <div class="mb-3">
+            <strong>Bio:</strong>
+            <p>{{ object.bio }}</p>
+        </div>
+        
+        <a href="{% url 'member-update' object.pk %}" class="btn btn-primary">Edit</a>
+        <a href="{% url 'member-list' %}" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+{% endblock %} 

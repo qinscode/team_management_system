@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">About Team Management</h1>
+        <p class="card-text">Version: {{ version }}</p>
+        <p class="card-text">Current Team Size: {{ team_size }} members</p>
+        <p class="card-text">
+            This is a demo application for the CI/CD pipeline lab. It demonstrates
+            the basic functionality of a team member management system built with Django.
+        </p>
+    </div>
+</div>
+{% endblock %} 
